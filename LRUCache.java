@@ -35,7 +35,7 @@ public class LRUCache{
 	
 	public void display() {
 		LinkedList<Integer> list = new LinkedList<Integer>(cache);
-		Iterator iterator = list.descendingIterator();
+		Iterator<Integer> iterator = list.descendingIterator();
 		while(iterator.hasNext()) {
 			System.out.print(iterator.next() + " ");
 		}
