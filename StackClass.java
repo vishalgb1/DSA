@@ -7,12 +7,12 @@ public class StackClass {
 		Node next;
 		public Node(int data) {
 			this.data = data;
-			next = null;					
-		}		
+			next = null;
+		}
 	}
 	
 	static class Stack{
-		public static Node head;
+		static Node head;
 		
 		public static boolean isEmpty() {
 			return head == null;
@@ -20,12 +20,12 @@ public class StackClass {
 		
 		public static void push(int data) {
 			Node newNode = new Node(data);
-			if( isEmpty()) {
+			if(isEmpty()) {
 				head = newNode;
 				return;
 			}
 			newNode.next = head;
-			head = newNode;
+			head = newNode;			
 		}
 		
 		public static int pop() {
@@ -45,8 +45,8 @@ public class StackClass {
 		}
 	}
 	
-	
 	public static void main(String args[]) {
+		
 		Stack s = new Stack();
 		s.push(1);
 		s.push(2);
@@ -58,7 +58,5 @@ public class StackClass {
 			s.pop();
 			
 		}
-		
 	}
-
 }
