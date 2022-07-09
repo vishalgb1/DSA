@@ -13,13 +13,12 @@ public class StackClass {
 	
 	static class Stack{
 		
-	static Node head;	
+		static Node head;
 		
 		public static boolean isEmpty() {
 			return head == null;
 		}
-		
-		static void push(int data) {
+		public static void push(int data) {
 			Node newNode = new Node(data);
 			if(isEmpty()) {
 				head = newNode;
@@ -36,28 +35,23 @@ public class StackClass {
 			head = head.next;
 			return top;
 		}
-		
 		public static int peek() {
 			if(isEmpty()) {
 				return -1;
 			}
 			return head.data;
 		}
-		
-		public static void main (String args[]) {
-			Stack stack = new Stack();
-			stack.push(1);
-			stack.push(2);
-			stack.push(3);
-			stack.push(4);
-			stack.push(5);
-			stack.push(1);
-			stack.push(2);
-			
-			while(!stack.isEmpty()){
-				System.out.println(stack.peek());
-				stack.pop();
-			}
+	}
+	
+	public static void main (String args[]) {
+		Stack stack = new Stack();
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		stack.push(4);
+		while(!stack.isEmpty()) {
+			System.out.println(stack.peek());
+			stack.pop();
 		}
 	}
 }
